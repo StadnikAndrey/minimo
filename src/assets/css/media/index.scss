@@ -5,12 +5,8 @@
     }
     .article-title{
         margin: 15px 0;
-    }
-    .home-article{
-        padding: 50px 0 0 0;
-    }
-    .home-articles__item {         
-        margin-bottom: 35px;
+    }     
+    .home-articles__item {          
         width: 48%;
     }
 }
@@ -22,6 +18,7 @@
 @media screen and(max-width:  620px) {
     .home-articles__item {        
         width: 100%;
+        margin-bottom: 90px;
     }
 }
 @media screen and(max-width:  600px) {
@@ -49,8 +46,7 @@
         display: block;
     }
     .header__menu{
-        display: block;
-        // padding: 50px 15px;
+        display: block;         
     }
     .header__menu-item{
         margin-bottom: 20px;

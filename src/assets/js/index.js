@@ -11,11 +11,13 @@ let module = (() => {
         btn.addEventListener('click', function(e){
             btn.classList.toggle('mobile-menu-btn--close-js');
             nav.classList.toggle('header__nav--active-js');
+            document.body.classList.toggle('body--hidden');
         });
         nav.addEventListener('click', function (e) {
             if (e.target.classList.contains('header__menu-link')) {
                 btn.classList.remove('mobile-menu-btn--close-js');
                 nav.classList.remove('header__nav--active-js');
+                document.body.classList.remove('body--hidden');
             }             
         })
          
