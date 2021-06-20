@@ -148,12 +148,13 @@
     }
 }
 
-.home-contact{
+.home-newsletter{
     background-color: #F0F0F0;
     padding: 60px 0;
     margin-bottom: 90px;
     &__title{
         text-align: center;
+        margin-bottom: 30px !important;
     }
     &__form{
         max-width: 400px;
@@ -173,15 +174,20 @@
         transform-origin: 0 0;
         transition: opacity .1s ease-in-out,transform .1s ease-in-out;
     }
+    &__label--error{
+        color: red;
+    }
     &__input{         
         background-color: inherit;
         width: 100%;
         border: none;
         outline: none;                   
     }
-    &__input--focus ~ .home-contact__label{                    
-        transform: translateY(-20px) translateX(-4px);
-    }
+    &__input--focus{
+        &~ .home-newsletter__label{                    
+            transform: translateY(-25px) translateX(-4px);
+        }
+    }  
     &__form-btn{
         transition: .2s;
         &:hover{

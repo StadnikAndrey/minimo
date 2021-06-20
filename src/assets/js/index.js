@@ -26,11 +26,19 @@ let module = (() => {
 
     function contactFormHome(){
         // плавающий label при фокусе
-        let inp = document.querySelector('.home-contact__input');
-        let label = document.querySelector('.home-contact__label');
+        let inp = document.querySelector('.home-newsletter__input');
+        let label = document.querySelector('.home-newsletter__label');
         inp.addEventListener('focus', function(e){
-            inp.classList.add('home-contact__input--focus');
-        })
+            inp.classList.add('home-newsletter__input--focus');
+        });
+        inp.addEventListener('change', function (e) {
+            if (/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,100}))$/g.test((e.target.value).trim())) {
+                label.classList.remove('home-newsletter__label--error');
+            } else {
+                label.classList.add('home-newsletter__label--error');
+            }
+        });
+        
     }
     contactFormHome();
      
