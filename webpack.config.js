@@ -10,7 +10,7 @@ let conf = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
-        //  clean: true //с dev-server пропадают пути у img после внесения правок в css, в development нужно отключить
+          clean: true //с dev-server пропадают пути у img после внесения правок в css, в development нужно отключить
     },     
     module: {
         rules: [
@@ -67,7 +67,7 @@ let conf = {
                 },
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
                 type: 'asset',
                 generator: {
                     filename: 'public/img/[name][ext]'
